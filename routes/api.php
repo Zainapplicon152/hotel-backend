@@ -17,3 +17,15 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+//ProductController
+Route::any('add', 'ProductController@add');
+Route::any('update', 'ProductController@update');
+Route::any('delete', 'ProductController@delete');
+Route::any('show', 'ProductController@show');
+
+//UserController
+Route::any('register', 'UserController@register');
+Route::any('login', 'UserController@login');
+
+
